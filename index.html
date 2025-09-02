@@ -9,18 +9,13 @@
 </head>
 <body>
 <header>
-  <select id="categoryFilter" onchange="filterByCategory()">
-  <option value="">Wszystkie kategorie</option>
-  <option value="biżuteria">Biżuteria</option>
-  <option value="ubrania">Ubrania</option>
-  <option value="akcesoria">Akcesoria</option>
-</select>
-  <div class="dropdown">
-  <button class="dropbtn"><i class="fa-solid fa-bars"></i> Kategorie</button>
+<div class="dropdown">
+  <button class="dropbtn">Kategorie</button>
   <div class="dropdown-content">
-    <a href="#">Biżuteria</a>
-    <a href="#">Ubrania</a>
-    <a href="#">Akcesoria</a>
+    <a href="#" data-value="">Wszystkie</a>
+    <a href="#" data-value="biżuteria">Biżuteria</a>
+    <a href="#" data-value="ubrania">Ubrania</a>
+    <a href="#" data-value="akcesoria">Akcesoria</a>
   </div>
 </div>
   <div class="search-bar">
@@ -41,6 +36,7 @@
 </body>
 
 </html>
+
 
 
 
