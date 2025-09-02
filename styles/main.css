@@ -257,3 +257,14 @@ nav i {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.product.biżuteria {
+  border-color: #c0a0ff;
+}
+
+.product.ubrania {
+  border-color: #a0d0ff;
+}
+
+.product.akcesoria {
+  border-color: #ffd080;
+}
