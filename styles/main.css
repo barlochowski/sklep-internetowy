@@ -287,3 +287,6 @@ nav i {
 .product button {
   margin-top: 10px;
 }
+.product {
+  transition: all 0.3s ease;
+}
