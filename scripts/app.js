@@ -5,6 +5,7 @@ fetch('data/products.json')
     products.forEach(p => {
       const item = document.createElement('div');
       item.className = 'product';
+      item.className = `product ${p.category}`;
       item.innerHTML = `
         <img src="${p.image}" alt="${p.name}" />
         <h2>${p.name}</h2>
@@ -40,6 +41,7 @@ function filterProducts() {
     p.style.display = name.includes(query) || description.includes(query) ? 'block' : 'none';
   });
 }
+
 
 
 
