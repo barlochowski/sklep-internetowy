@@ -113,3 +113,42 @@ nav a:hover {
   margin: 0 auto;
   gap: 20px;
 }
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.product .price {
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.product button {
+  margin-top: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
