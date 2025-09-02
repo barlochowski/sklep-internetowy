@@ -23,6 +23,14 @@ function addToCart(id) {
   alert('Dodano do koszyka!');
 
 }
+function searchProducts() {
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  const products = document.querySelectorAll('.product');
+  products.forEach(p => {
+    const name = p.querySelector('h2').textContent.toLowerCase();
+    p.style.display = name.includes(query) ? 'block' : 'none';
+  });
+}
 
 
 
