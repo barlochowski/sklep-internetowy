@@ -9,6 +9,7 @@ fetch('data/products.json')
         <img src="${p.image}" alt="${p.name}" />
         <h2>${p.name}</h2>
         <p>${p.description}</p>
+        <p class="price">${p.price.toFixed(2)} zł</p>
         <p><strong>${p.price.toFixed(2)} zł</strong></p>
         <button onclick="addToCart(${p.id})" data-testid="add-to-cart">Dodaj do koszyka</button>
       `;
@@ -23,4 +24,5 @@ function addToCart(id) {
   alert('Dodano do koszyka!');
 
 }
-<p class="price">${p.price.toFixed(2)} zł</p>
+
+
