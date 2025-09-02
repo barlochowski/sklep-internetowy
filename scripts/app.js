@@ -41,6 +41,18 @@ function filterProducts() {
   });
 }
 
+function filterByCategory() {
+  const selected = document.getElementById('categoryFilter').value;
+  const products = document.querySelectorAll('.product');
+  products.forEach(p => {
+    if (!selected || p.classList.contains(selected)) {
+      p.style.display = 'block';
+    } else {
+      p.style.display = 'none';
+    }
+  });
+}
+
 
 
 
