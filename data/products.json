@@ -4,7 +4,7 @@
     "name": "Naszyjnik srebrny",
     "category": "biżuteria",
     "price": 129.99,
-    "image": "https://images.unsplash.com/photo-1603570419960-3c8b6c3f9f3e",
+    "image": "assets/images/product-1.jpg",
     "description": "Elegancki naszyjnik ze srebra próby 925."
   },
   {
@@ -12,7 +12,7 @@
     "name": "Pierścionek z ametystem",
     "category": "biżuteria",
     "price": 249.00,
-    "image": "https://images.unsplash.com/photo-1614281437594-9e6f3f7f2c3d",
+    "image": "assets/images/product-2.jpg",
     "description": "Stylowy pierścionek z naturalnym ametystem."
   },
   {
@@ -20,7 +20,7 @@
     "name": "Kolczyki złote",
     "category": "biżuteria",
     "price": 189.00,
-    "image": "https://images.unsplash.com/photo-1585386959984-a415522b831d",
+    "image": "assets/images/product-3.jpg",
     "description": "Złote kolczyki w klasycznym stylu."
   },
   {
@@ -28,7 +28,7 @@
     "name": "Bransoletka skórzana",
     "category": "biżuteria",
     "price": 99.00,
-    "image": "https://images.unsplash.com/photo-1603570419960-3c8b6c3f9f3e",
+    "image": "assets/images/product-4.jpg",
     "description": "Bransoletka z naturalnej skóry z metalowym zapięciem."
   },
   {
@@ -36,7 +36,7 @@
     "name": "Zegarek minimalistyczny",
     "category": "akcesoria",
     "price": 349.00,
-    "image": "https://images.unsplash.com/photo-1518546305924-4e3b0c6f1e3e",
+    "image": "assets/images/product-5.jpg",
     "description": "Zegarek w stylu minimalistycznym z czarnym paskiem."
   },
   {
@@ -44,7 +44,7 @@
     "name": "Bluza oversize",
     "category": "ubrania",
     "price": 199.00,
-    "image": "https://images.unsplash.com/photo-1618354691215-0c6f1e3e3e3e",
+    "image": "assets/images/product-6.jpg",
     "description": "Wygodna bluza z bawełny organicznej."
   },
   {
@@ -52,7 +52,7 @@
     "name": "Sukienka letnia",
     "category": "ubrania",
     "price": 179.00,
-    "image": "https://images.unsplash.com/photo-1520975918910-1b9c6e3e3e3e",
+    "image": "assets/images/product-7.jpg",
     "description": "Zwiewna sukienka idealna na lato."
   },
   {
@@ -60,7 +60,7 @@
     "name": "Kurtka jeansowa",
     "category": "ubrania",
     "price": 249.00,
-    "image": "https://images.unsplash.com/photo-1585386959984-a415522b831d",
+    "image": "assets/images/product-8.jpg",
     "description": "Klasyczna kurtka jeansowa z kieszeniami."
   },
   {
@@ -68,7 +68,7 @@
     "name": "Koszula lniana",
     "category": "ubrania",
     "price": 159.00,
-    "image": "https://images.unsplash.com/photo-1585386959984-a415522b831d",
+    "image": "assets/images/product-9.jpg",
     "description": "Koszula z naturalnego lnu, idealna na lato."
   },
   {
@@ -76,7 +76,7 @@
     "name": "Spodnie materiałowe",
     "category": "ubrania",
     "price": 189.00,
-    "image": "https://images.unsplash.com/photo-1618354691215-0c6f1e3e3e3e",
+    "image": "assets/images/product-10.jpg",
     "description": "Eleganckie spodnie z wysokim stanem."
   },
   {
@@ -84,7 +84,7 @@
     "name": "T-shirt basic",
     "category": "ubrania",
     "price": 79.00,
-    "image": "https://images.unsplash.com/photo-1520975918910-1b9c6e3e3e3e",
+    "image": "assets/images/product-11.jpg",
     "description": "Prosty T-shirt z bawełny premium."
   },
   {
@@ -92,7 +92,7 @@
     "name": "Płaszcz wełniany",
     "category": "ubrania",
     "price": 399.00,
-    "image": "https://images.unsplash.com/photo-1518546305924-4e3b0c6f1e3e",
+    "image": "assets/images/product-2.jpg",
     "description": "Ciepły płaszcz z wełny w kolorze camel."
   },
   {
@@ -100,7 +100,7 @@
     "name": "Torebka skórzana",
     "category": "akcesoria",
     "price": 299.00,
-    "image": "https://images.unsplash.com/photo-1614281437594-9e6f3f7f2c3d",
+    "image": "assets/images/product-13.jpg",
     "description": "Torebka z naturalnej skóry z regulowanym paskiem."
   },
   {
@@ -108,7 +108,7 @@
     "name": "Opaska do włosów",
     "category": "akcesoria",
     "price": 49.00,
-    "image": "https://images.unsplash.com/photo-1603570419960-3c8b6c3f9f3e",
+    "image": "assets/images/product-14.jpg",
     "description": "Stylowa opaska do włosów z materiału."
   },
   {
@@ -116,7 +116,7 @@
     "name": "Kolczyki perłowe",
     "category": "biżuteria",
     "price": 219.00,
-    "image": "https://images.unsplash.com/photo-1585386959984-a415522b831d",
+    "image": "assets/images/product-15.jpg",
     "description": "Kolczyki z naturalnymi perłami."
   },
   {
@@ -124,7 +124,7 @@
     "name": "Naszyjnik z kamieniem księżycowym",
     "category": "biżuteria",
     "price": 279.00,
-    "image": "https://images.unsplash.com/photo-1614281437594-9e6f3f7f2c3d",
+    "image": "assets/images/product-16.jpg",
     "description": "Naszyjnik z subtelnym kamieniem księżycowym."
   },
   {
@@ -132,7 +132,7 @@
     "name": "Top sportowy",
     "category": "ubrania",
     "price": 99.00,
-    "image": "https://images.unsplash.com/photo-1520975918910-1b9c6e3e3e3e",
+    "image": "assets/images/product-17.jpg",
     "description": "Oddychający top do ćwiczeń."
   },
   {
@@ -140,7 +140,7 @@
     "name": "Sweter z golfem",
     "category": "ubrania",
     "price": 229.00,
-    "image": "https://images.unsplash.com/photo-1618354691215-0c6f1e3e3e3e",
+    "image": "assets/images/product-18.jpg",
     "description": "Miękki sweter z golfem na chłodne dni."
   },
   {
@@ -148,7 +148,7 @@
     "name": "Bransoletka z koralików",
     "category": "biżuteria",
     "price": 89.00,
-    "image": "https://images.unsplash.com/photo-1603570419960-3c8b6c3f9f3e",
+    "image": "assets/images/product-19.jpg",
     "description": "Kolorowa bransoletka z ręcznie robionych koralików."
   },
   {
@@ -156,7 +156,7 @@
     "name": "Zegarek klasyczny",
     "category": "akcesoria",
     "price": 399.00,
-    "image": "https://images.unsplash.com/photo-1518546305924-4e3b0c6f1e3e",
+    "image": "assets/images/product-20.jpg",
     "description": "Zegarek z białą tarczą i brązowym paskiem."
   }
 ]
