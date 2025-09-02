@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Naszyjnik srebrny z sercem",
+    "category": "Biżuteria",
+    "price": 199.99,
+    "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9",
+    "description": "Elegancki srebrny naszyjnik z zawieszką w kształcie serca."
+  },
+  {
+    "id": 2,
+    "name": "Pierścionek złoty z cyrkoniami",
+    "category": "Biżuteria",
+    "price": 349.99,
+    "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3",
+    "description": "Stylowy złoty pierścionek ozdobiony cyrkoniami."
+  },
+  {
+    "id": 3,
+    "name": "Sukienka wieczorowa",
+    "category": "Ubrania",
+    "price": 499.99,
+    "image": "https://images.unsplash.com/photo-1521335629791-ce4aec67dd47",
+    "description": "Długa, elegancka sukienka wieczorowa w kolorze granatowym."
+  },
+  {
+    "id": 4,
+    "name": "Bluzka satynowa",
+    "category": "Ubrania",
+    "price": 129.99,
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+    "description": "Delikatna satynowa bluzka idealna na specjalne okazje."
+  }
+]
