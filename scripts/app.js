@@ -53,6 +53,13 @@ function filterByCategory() {
   });
 }
 
+item.innerHTML = `
+  <img src="${p.image}" alt="${p.name}" />
+  <h2>${p.name}</h2>
+  <p class="description">${p.description}</p>
+  <p class="price">${p.price.toFixed(2)} zł</p>
+  <button onclick="addToCart(${p.id})">Dodaj do koszyka</button>
+`;
 
 
 
