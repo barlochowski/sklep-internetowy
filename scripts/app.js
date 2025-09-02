@@ -21,4 +21,6 @@ function addToCart(id) {
   cart.push(id);
   localStorage.setItem('cart', JSON.stringify(cart));
   alert('Dodano do koszyka!');
+
 }
+<p class="price">${p.price.toFixed(2)} zł</p>
