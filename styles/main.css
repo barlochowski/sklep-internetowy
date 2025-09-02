@@ -268,3 +268,22 @@ nav i {
 .product.akcesoria {
   border-color: #ffd080;
 }
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 350px; /* lub inna wartość zależna od zawartości */
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: center;
+}
+.price {
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.product button {
+  margin-top: 10px;
+}
