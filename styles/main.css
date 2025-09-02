@@ -156,3 +156,8 @@ nav i {
   margin-right: 8px;
   color: white;
 }
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
