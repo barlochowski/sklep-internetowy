@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zamówienie</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header>
+    <h1>Formularz zamówienia</h1>
+    <nav>
+      <a href="index.html">Strona główna</a>
+      <a href="cart.html">Koszyk</a>
+    </nav>
+  </header>
+  <main>
+    <form id="order-form">
+      <label>Imię: <input type="text" name="name" required /></label>
+      <label>Email: <input type="email" name="email" required /></label>
+      <label>Adres: <input type="text" name="address" required /></label>
+      <button type="submit" data-testid="submit-order">Zamów</button>
+    </form>
+  </main>
+  <script src="scripts/order.js"></script>
+</body>
+</html>
