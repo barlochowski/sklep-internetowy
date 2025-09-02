@@ -31,6 +31,15 @@ function searchProducts() {
     p.style.display = name.includes(query) ? 'block' : 'none';
   });
 }
+function filterProducts() {
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  const products = document.querySelectorAll('.product');
+  products.forEach(p => {
+    const name = p.querySelector('h2').textContent.toLowerCase();
+    const description = p.querySelector('.description').textContent.toLowerCase();
+    p.style.display = name.includes(query) || description.includes(query) ? 'block' : 'none';
+  });
+}
 
 
 
