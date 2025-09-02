@@ -41,8 +41,7 @@ function filterProducts() {
   });
 }
 
-function filterByCategory() {
-  const selected = document.getElementById('categoryFilter').value;
+function filterByCategory(selected) {
   const products = document.querySelectorAll('.product');
   products.forEach(p => {
     if (!selected || p.classList.contains(selected)) {
@@ -60,6 +59,13 @@ item.innerHTML = `
   <p class="price">${p.price.toFixed(2)} zł</p>
   <button onclick="addToCart(${p.id})">Dodaj do koszyka</button>
 `;
+document.querySelectorAll('.dropdown-content a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const selected = this.dataset.value;
+    filterByCategory(selected);
+  });
+});
 
 
 
