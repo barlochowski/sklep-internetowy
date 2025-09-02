@@ -10,7 +10,6 @@ fetch('data/products.json')
         <h2>${p.name}</h2>
         <p class="description">${p.description}</p>
         <p class="price">${p.price.toFixed(2)} zł</p>
-        <p><strong>${p.price.toFixed(2)} zł</strong></p>
         <button onclick="addToCart(${p.id})" data-testid="add-to-cart">Dodaj do koszyka</button>
       `;
       list.appendChild(item);
@@ -24,6 +23,7 @@ function addToCart(id) {
   alert('Dodano do koszyka!');
 
 }
+
 
 
 
