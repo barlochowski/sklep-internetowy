@@ -339,3 +339,50 @@ nav {
 .cart-actions .button:hover {
   background-color: #555;
 }
+/* === Responsywność nagłówka na telefonie === */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .header-left,
+  .header-center,
+  .header-right {
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-link {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-bar input {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .dropbtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
