@@ -135,6 +135,7 @@ nav i {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
+  align-items: stretch;
 }
 
 .product:hover {
@@ -189,4 +190,7 @@ nav i {
 
 .product.akcesoria {
   border-color: #ffd080;
+}
+.product .price {
+  margin-top: auto;
 }
