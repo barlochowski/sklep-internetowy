@@ -7,20 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = document.createElement('div');
         item.className = `product ${p.category}`;
         item.innerHTML = `
-  <div class="product-content">
-    <img src="${p.image}" alt="${p.name}" />
-    <h2>${p.name}</h2>
-    <p class="description">${p.description}</p>
-  </div>
-  <div class="product-footer">
-    <p class="price">${p.price.toFixed(2)} zł</p>
-    <button onclick="addToCart(${p.id})">Dodaj do koszyka</button>
-  </div>
-`;
+          <div class="product-content">
+            <img src="${p.image}" alt="${p.name}" />
+            <h2>${p.name}</h2>
+            <p class="description">${p.description}</p>
+          </div>
+          <div class="product-footer">
+            <p class="price">${p.price.toFixed(2)} zł</p>
+            <button onclick="addToCart(${p.id})">Dodaj do koszyka</button>
+          </div>
+        `;
         list.appendChild(item);
       });
 
-      // Obsługa kliknięć w dropdown
       document.querySelectorAll('.dropdown-content a').forEach(link => {
         link.addEventListener('click', function (e) {
           e.preventDefault();
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
 
-      updateCartCount(); // ← uruchamia licznik po załadowaniu strony
+      updateCartCount();
     });
 });
 
@@ -39,7 +38,6 @@ function addToCart(id) {
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount();
 
-  // Animacja lecenia do koszyka
   const product = document.querySelector(`button[onclick="addToCart(${id})"]`).closest('.product');
   const img = product.querySelector('img');
   const cartIcon = document.getElementById('cart-count');
@@ -65,7 +63,6 @@ function addToCart(id) {
     clone.remove();
   }, 800);
 
-  // Animacja licznika
   cartIcon.classList.add('animate');
   setTimeout(() => cartIcon.classList.remove('animate'), 400);
 }
@@ -76,18 +73,14 @@ function filterProducts() {
   products.forEach(p => {
     const name = p.querySelector('h2').textContent.toLowerCase();
     const description = p.querySelector('.description').textContent.toLowerCase();
-    p.style.display = name.includes(query) || description.includes(query) ? 'block' : 'none';
+    p.style.display = name.includes(query) || description.includes(query) ? 'flex' : 'none'; // ✅ ważne: 'flex'
   });
 }
 
 function filterByCategory(selected) {
   const products = document.querySelectorAll('.product');
   products.forEach(p => {
-    if (!selected || p.classList.contains(selected)) {
-      p.style.display = 'block';
-    } else {
-      p.style.display = 'none';
-    }
+    p.style.display = (!selected || p.classList.contains(selected)) ? 'flex' : 'none'; // ✅ ważne: 'flex'
   });
 }
 
@@ -95,4 +88,3 @@ function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   document.getElementById('cart-count').textContent = cart.length;
 }
-
