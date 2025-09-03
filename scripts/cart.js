@@ -8,12 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(products => {
       let total = 0;
 
-      cart.forEach(entry => {
-        const product = products.find(p => p.id === entry.id);
+      cart.forEach(id => {
+        const product = products.find(p => p.id === id);
         if (!product) return;
 
-        const subtotal = product.price * entry.quantity;
-        total += subtotal;
+        total += product.price;
 
         const item = document.createElement('div');
         item.className = 'cart-product';
@@ -22,12 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="cart-details">
             <h2>${product.name}</h2>
             <p class="description">${product.description}</p>
-            <p class="price">${product.price.toFixed(2)} zł × ${entry.quantity} = ${subtotal.toFixed(2)} zł</p>
-            <div class="quantity-controls">
-              <button onclick="changeQuantity(${product.id}, -1)">−</button>
-              <span>${entry.quantity}</span>
-              <button onclick="changeQuantity(${product.id}, 1)">+</button>
-            </div>
+            <p class="price">${product.price.toFixed(2)} zł</p>
             <button onclick="removeFromCart(${product.id})">Usuń</button>
           </div>
         `;
@@ -38,23 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function changeQuantity(id, delta) {
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const item = cart.find(p => p.id === id);
-  if (!item) return;
-
-  item.quantity += delta;
-  if (item.quantity <= 0) {
-    cart = cart.filter(p => p.id !== id);
-  }
-
-  localStorage.setItem('cart', JSON.stringify(cart));
-  location.reload();
-}
-
 function removeFromCart(id) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cart = cart.filter(p => p.id !== id);
+  const index = cart.indexOf(id);
+  if (index !== -1) {
+    cart.splice(index, 1);
+  }
   localStorage.setItem('cart', JSON.stringify(cart));
   location.reload();
 }
