@@ -58,3 +58,6 @@ function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   document.getElementById('cart-count').textContent = cart.length;
 }
+const count = document.getElementById('cart-count');
+count.classList.add('animate');
+setTimeout(() => count.classList.remove('animate'), 400);
