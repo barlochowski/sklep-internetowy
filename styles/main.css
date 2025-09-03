@@ -129,6 +129,20 @@ nav {
 .product.ubrania   { border-color: #a0d0ff; }
 .product.akcesoria { border-color: #ffd080; }
 
+.nav-link {
+  color: white !important;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f0c040 !important;
+}
+
 /* === Dropdown Kategorie === */
 .dropdown {
   position: relative;
