@@ -34,7 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function addToCart(id) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cart.push(id);
+
+  const existing = cart.find(item => item.id === id);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ id: id, quantity: 1 });
+  }
+
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount();
 
@@ -73,18 +80,19 @@ function filterProducts() {
   products.forEach(p => {
     const name = p.querySelector('h2').textContent.toLowerCase();
     const description = p.querySelector('.description').textContent.toLowerCase();
-    p.style.display = name.includes(query) || description.includes(query) ? 'flex' : 'none'; // ✅ ważne: 'flex'
+    p.style.display = name.includes(query) || description.includes(query) ? 'flex' : 'none';
   });
 }
 
 function filterByCategory(selected) {
   const products = document.querySelectorAll('.product');
   products.forEach(p => {
-    p.style.display = (!selected || p.classList.contains(selected)) ? 'flex' : 'none'; // ✅ ważne: 'flex'
+    p.style.display = (!selected || p.classList.contains(selected)) ? 'flex' : 'none';
   });
 }
 
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  document.getElementById('cart-count').textContent = cart.length;
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  document.getElementById('cart-count').textContent = totalItems;
 }
