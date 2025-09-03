@@ -8,6 +8,9 @@
   max-width: 100%;
 }
 body {
+  overflow-x: hidden;
+}
+body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
