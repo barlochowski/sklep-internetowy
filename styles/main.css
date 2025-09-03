@@ -9,10 +9,6 @@
 }
 body {
   overflow-x: hidden;
-  html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
 }
 body {
   font-family: Arial, sans-serif;
@@ -21,19 +17,26 @@ body {
   background-color: #f9f9f9;
 }
 
+/* Usuń domyślne marginesy */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Nagłówek ciasno przy górze */
 header {
   width: 100%;
-  min-height: 120px; /* możesz zwiększyć np. do 150px */
   background-color: #111;
   color: white;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 30px;
+  padding: 15px 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  position: sticky;
-  top: 0;
+  position: relative; /* zamiast sticky */
   z-index: 1000;
 }
 
