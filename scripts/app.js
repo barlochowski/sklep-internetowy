@@ -101,4 +101,7 @@ item.innerHTML = `
 document.addEventListener('DOMContentLoaded', () => {
   updateCartCount(); // ← uruchamia licznik po załadowaniu strony
 });
+const count = document.getElementById('cart-count');
+count.classList.add('animate');
+setTimeout(() => count.classList.remove('animate'), 400);
 
