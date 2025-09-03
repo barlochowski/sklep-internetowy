@@ -1,31 +1,25 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8" />
-  <title>Sklep z Biżuterią i Ubraniami</title>
-  <link rel="stylesheet" href="styles/main.css" />
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<body>
-  <header>
+<header>
+  <div class="header-left">
     <div class="logo">
       <i class="fa-solid fa-gem"></i> Biżuteria & Moda
     </div>
+  </div>
 
+  <div class="header-center">
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Szukaj produktu..." oninput="filterProducts()" />
       <button><i class="fa-solid fa-search"></i></button>
     </div>
+  </div>
 
+  <div class="header-right">
     <nav>
       <a href="index.html"><i class="fa-solid fa-house"></i> Strona główna</a>
-  <a href="cart.html" id="cart-icon">
-  <i class="fa-solid fa-cart-shopping"></i> Koszyk
-  <span id="cart-count">0</span>
-</a>
+      <a href="cart.html" id="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i> Koszyk
+        <span id="cart-count">0</span>
+      </a>
       <a href="#"><i class="fa-solid fa-user"></i> Konto</a>
-
       <div class="dropdown">
         <button class="dropbtn"><i class="fa-solid fa-bars"></i> Kategorie</button>
         <div class="dropdown-content">
@@ -36,12 +30,5 @@
         </div>
       </div>
     </nav>
-  </header>
-
-  <main id="product-list"></main>
-
-  <script src="scripts/app.js"></script>
-</body>
-</html>
-
-
+  </div>
+</header>
