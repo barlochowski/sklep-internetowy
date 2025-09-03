@@ -105,3 +105,39 @@
   height: auto;
   border-radius: 4px;
 }
+.cart-product {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+.cart-product img {
+  width: 80px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.cart-details {
+  flex-grow: 1;
+}
+
+.cart-details h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cart-details .price {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.cart-details button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
