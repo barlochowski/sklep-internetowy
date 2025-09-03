@@ -107,6 +107,12 @@ nav {
   margin-bottom: 10px;
   border-radius: 4px;
 }
+.product {
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .product h2 {
   font-size: 18px;
