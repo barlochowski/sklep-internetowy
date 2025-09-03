@@ -12,6 +12,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   position: sticky;
   top: 0;
@@ -28,7 +29,8 @@ header {
 
 nav {
   display: flex;
-  gap: 25px;
+  align-items: center;
+  gap: 20px;
 }
 
 nav a {
@@ -45,162 +47,11 @@ nav a:hover {
   color: #f0c040;
 }
 
-nav a {
-  color: white;
-  margin-right: 15px;
-  text-decoration: none;
-}
-
-#product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.product {
-  border: 1px solid #ccc;
-  padding: 15px;
-  background-color: white;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.product:hover {
-  transform: scale(1.02);
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  border-radius: 4px;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  margin-top: 10px;
-}
-#product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.product {
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align: center;
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-header {
-  background-color: #222;
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 24px;
-  margin: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-#product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  max-width: 1100px;
-  margin: 0 auto;
-  gap: 20px;
-}
-.product {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 15px;
-  border: 1px solid #ccc;
-  background-color: white;
-  text-align: center;
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.product h2 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.product p {
-  margin: 5px 0;
-}
-
-.product .price {
-  font-weight: bold;
-  margin-top: auto;
-}
-
-.product button {
-  margin-top: 10px;
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
 nav i {
   margin-right: 8px;
   color: white;
 }
-.description {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-}
-.price {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  margin-top: auto;
-}
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -221,6 +72,7 @@ nav i {
   cursor: pointer;
   border-radius: 4px;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -233,6 +85,9 @@ nav i {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .dropdown-content {
@@ -258,6 +113,72 @@ nav i {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+#product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 350px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.02);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.product h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: auto;
+}
+
+.product button {
+  margin-top: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
 .product.biżuteria {
   border-color: #c0a0ff;
 }
@@ -268,26 +189,4 @@ nav i {
 
 .product.akcesoria {
   border-color: #ffd080;
-}
-.product {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  min-height: 350px; /* lub inna wartość zależna od zawartości */
-  padding: 15px;
-  border: 1px solid #ccc;
-  background-color: white;
-  text-align: center;
-}
-.price {
-  font-weight: bold;
-  margin-top: auto;
-}
-
-.product button {
-  margin-top: 10px;
-}
-.product {
-  transition: all 0.3s ease;
 }
