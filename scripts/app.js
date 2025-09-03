@@ -7,14 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = document.createElement('div');
         item.className = `product ${p.category}`;
         item.innerHTML = `
-          <img src="${p.image}" alt="${p.name}" />
-          <h2>${p.name}</h2>
-          <p class="description">${p.description}</p>
-          <div class="product-footer">
-            <p class="price">${p.price.toFixed(2)} zł</p>
-            <button onclick="addToCart(${p.id})" data-testid="add-to-cart">Dodaj do koszyka</button>
-          </div>
-        `;
+  <div class="product-content">
+    <img src="${p.image}" alt="${p.name}" />
+    <h2>${p.name}</h2>
+    <p class="description">${p.description}</p>
+  </div>
+  <div class="product-footer">
+    <p class="price">${p.price.toFixed(2)} zł</p>
+    <button onclick="addToCart(${p.id})">Dodaj do koszyka</button>
+  </div>
+`;
         list.appendChild(item);
       });
 
@@ -93,3 +95,4 @@ function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   document.getElementById('cart-count').textContent = cart.length;
 }
+
