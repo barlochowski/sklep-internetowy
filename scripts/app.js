@@ -98,3 +98,6 @@ function updateCartCount() {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
   document.getElementById('cart-count').textContent = totalItems;
 }
+if (!Array.isArray(cart) || typeof cart[0] === 'number') {
+  localStorage.removeItem('cart');
+}
