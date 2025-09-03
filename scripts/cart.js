@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="${product.image}" alt="${product.name}" />
           <div class="cart-details">
             <h2>${product.name}</h2>
+            <p class="description">${product.description}</p>
             <p class="price">${product.price.toFixed(2)} zł</p>
             <button onclick="removeFromCart(${product.id})">Usuń</button>
           </div>
@@ -35,5 +36,5 @@ function removeFromCart(id) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart = cart.filter(itemId => itemId !== id);
   localStorage.setItem('cart', JSON.stringify(cart));
-  location.reload(); // szybkie odświeżenie widoku
+  location.reload();
 }
