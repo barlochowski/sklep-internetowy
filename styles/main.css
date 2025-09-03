@@ -214,3 +214,12 @@ nav i {
 #cart-count.animate {
   animation: pop 0.4s ease;
 }
+.fly-to-cart {
+  position: absolute;
+  z-index: 1000;
+  transition: all 0.8s ease-in-out;
+  pointer-events: none;
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+}
