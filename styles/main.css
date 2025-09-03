@@ -1,119 +1,3 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-header {
-  background-color: #111;
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #f0c040;
-}
-
-nav i {
-  margin-right: 8px;
-  color: white;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.search-bar input {
-  padding: 6px 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-
-.search-bar button {
-  background-color: #f0c040;
-  border: none;
-  padding: 6px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  background-color: #333;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 10px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0c040;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 #product-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -128,17 +12,28 @@ nav i {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  min-height: 380px;
+  min-height: 420px; /* ✅ zwiększona wysokość */
   padding: 15px;
   border: 1px solid #ccc;
   background-color: white;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
+  overflow: hidden; /* ✅ zapobiega rozlewaniu */
 }
 
-.product:hover {
-  transform: scale(1.02);
+.product-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .product img {
@@ -163,13 +58,6 @@ nav i {
   margin-bottom: 10px;
 }
 
-.product-footer {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .price {
   font-size: 16px;
   font-weight: bold;
@@ -184,17 +72,9 @@ nav i {
   cursor: pointer;
 }
 
-.product.biżuteria {
-  border-color: #c0a0ff;
-}
-
-.product.ubrania {
-  border-color: #a0d0ff;
-}
-
-.product.akcesoria {
-  border-color: #ffd080;
-}
+.product.biżuteria { border-color: #c0a0ff; }
+.product.ubrania   { border-color: #a0d0ff; }
+.product.akcesoria { border-color: #ffd080; }
 
 #cart-count {
   background-color: #f0c040;
@@ -205,24 +85,6 @@ nav i {
   margin-left: 6px;
 }
 
-@keyframes pop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.3); }
-  100% { transform: scale(1); }
-}
-
-#cart-count.animate {
-  animation: pop 0.4s ease;
-}
-.fly-to-cart {
-  position: absolute;
-  z-index: 1000;
-  transition: all 0.8s ease-in-out;
-  pointer-events: none;
-  width: 50px;
-  height: auto;
-  border-radius: 4px;
-}
 @keyframes bounce {
   0%   { transform: scale(1); }
   30%  { transform: scale(1.4); }
@@ -233,27 +95,13 @@ nav i {
 #cart-count.animate {
   animation: bounce 0.4s ease;
 }
-.product {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  min-height: 380px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  background-color: white;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
 
-.product-content {
-  flex-grow: 1;
-}
-
-.product-footer {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.fly-to-cart {
+  position: absolute;
+  z-index: 1000;
+  transition: all 0.8s ease-in-out;
+  pointer-events: none;
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
 }
