@@ -95,9 +95,12 @@ function filterByCategory(selected) {
 
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+ const totalItems = cart.reduce((sum, item) => {
+  return sum + (item.quantity || 1);
+}, 0);
   document.getElementById('cart-count').textContent = totalItems;
 }
 if (!Array.isArray(cart) || typeof cart[0] === 'number') {
   localStorage.removeItem('cart');
 }
+
