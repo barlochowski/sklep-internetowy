@@ -34,12 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function addToCart(id) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
   const existing = cart.find(item => item.id === id);
   if (existing) {
     existing.quantity += 1;
   } else {
     cart.push({ id: id, quantity: 1 });
   }
+
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount();
 
