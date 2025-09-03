@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="${p.image}" alt="${p.name}" />
           <h2>${p.name}</h2>
           <p class="description">${p.description}</p>
-          <p class="price">${p.price.toFixed(2)} zł</p>
-          <button onclick="addToCart(${p.id})" data-testid="add-to-cart">Dodaj do koszyka</button>
+          <div class="product-footer">
+            <p class="price">${p.price.toFixed(2)} zł</p>
+            <button onclick="addToCart(${p.id})" data-testid="add-to-cart">Dodaj do koszyka</button>
+          </div>
         `;
         list.appendChild(item);
       });
@@ -24,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
           filterByCategory(selected);
         });
       });
+
+      updateCartCount(); // ← uruchamia licznik po załadowaniu strony
     });
 });
 
@@ -36,7 +40,7 @@ function addToCart(id) {
   // Animacja lecenia do koszyka
   const product = document.querySelector(`button[onclick="addToCart(${id})"]`).closest('.product');
   const img = product.querySelector('img');
-  const cartIcon = document.getElementById('cart-icon');
+  const cartIcon = document.getElementById('cart-count');
 
   const clone = img.cloneNode(true);
   clone.classList.add('fly-to-cart');
@@ -58,6 +62,10 @@ function addToCart(id) {
   setTimeout(() => {
     clone.remove();
   }, 800);
+
+  // Animacja licznika
+  cartIcon.classList.add('animate');
+  setTimeout(() => cartIcon.classList.remove('animate'), 400);
 }
 
 function filterProducts() {
@@ -80,28 +88,8 @@ function filterByCategory(selected) {
     }
   });
 }
+
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   document.getElementById('cart-count').textContent = cart.length;
 }
-const count = document.getElementById('cart-count');
-count.classList.add('animate');
-setTimeout(() => count.classList.remove('animate'), 400);
-
-item.innerHTML = `
-  <img src="${p.image}" alt="${p.name}" />
-  <h2>${p.name}</h2>
-  <p class="description">${p.description}</p>
-  <div class="product-footer">
-    <p class="price">${p.price.toFixed(2)} zł</p>
-    <button onclick="addToCart(${p.id})">Dodaj do koszyka</button>
-  </div>
-`;
-
-document.addEventListener('DOMContentLoaded', () => {
-  updateCartCount(); // ← uruchamia licznik po załadowaniu strony
-});
-const count = document.getElementById('cart-count');
-count.classList.add('animate');
-setTimeout(() => count.classList.remove('animate'), 400);
-
