@@ -8,45 +8,51 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
- <header>
-  <div class="header-left">
-    <div class="logo">
-      <i class="fa-solid fa-gem"></i> Biżuteria & Moda
-    </div>
-  </div>
-
-  <div class="header-center">
-    <div class="search-bar">
-  <input type="text" id="searchInput" placeholder="Szukaj produktu..." oninput="filterProducts()" />
-</div>
-  </div>
-
-  <div class="header-right">
-    <nav>
-    <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Strona główna</a>
-<a href="cart.html" id="cart-icon" class="nav-link"><i class="fa-solid fa-cart-shopping"></i> Koszyk <span id="cart-count">0</span></a>
-<a href="#" class="nav-link"><i class="fa-solid fa-user"></i> Konto</a>
-        <span id="cart-count">0</span>
-      </a>
-      <a href="#"><i class="fa-solid fa-user"></i> Konto</a>
-      <div class="dropdown">
-        <button class="dropbtn"><i class="fa-solid fa-bars"></i> Kategorie</button>
-        <div class="dropdown-content">
-          <a href="#" data-value="">Wszystkie</a>
-          <a href="#" data-value="biżuteria">Biżuteria</a>
-          <a href="#" data-value="ubrania">Ubrania</a>
-          <a href="#" data-value="akcesoria">Akcesoria</a>
-        </div>
+  <header>
+    <div class="header-left">
+      <div class="logo">
+        <i class="fa-solid fa-gem"></i> Biżuteria & Moda
       </div>
-    </nav>
-  </div>
-</header>
+    </div>
+
+    <div class="header-center">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Szukaj produktu..." oninput="filterProducts()" />
+      </div>
+    </div>
+
+    <div class="header-right">
+      <nav>
+        <a href="index.html" class="nav-link">
+          <i class="fa-solid fa-house"></i> Strona główna
+        </a>
+
+        <a href="cart.html" id="cart-icon" class="nav-link">
+          <i class="fa-solid fa-cart-shopping"></i> Koszyk
+          <span id="cart-count">0</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-user"></i> Konto
+        </a>
+
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="fa-solid fa-bars"></i> Kategorie
+          </button>
+          <div class="dropdown-content">
+            <a href="#" data-value="">Wszystkie</a>
+            <a href="#" data-value="biżuteria">Biżuteria</a>
+            <a href="#" data-value="ubrania">Ubrania</a>
+            <a href="#" data-value="akcesoria">Akcesoria</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
 
   <main id="product-list"></main>
 
   <script src="scripts/app.js"></script>
 </body>
 </html>
-
-
-
