@@ -61,3 +61,12 @@ function updateCartCount() {
 const count = document.getElementById('cart-count');
 count.classList.add('animate');
 setTimeout(() => count.classList.remove('animate'), 400);
+item.innerHTML = `
+  <img src="${p.image}" alt="${p.name}" />
+  <h2>${p.name}</h2>
+  <p class="description">${p.description}</p>
+  <div class="product-footer">
+    <p class="price">${p.price.toFixed(2)} zł</p>
+    <button onclick="addToCart(${p.id})">Dodaj do koszyka</button>
+  </div>
+`;
