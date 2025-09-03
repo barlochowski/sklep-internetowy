@@ -1,3 +1,49 @@
+/* === Layout główny === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 30px;
+  background-color: #111;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-center {
+  justify-content: center;
+}
+
+.header-right {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
 #product-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -7,19 +53,19 @@
   margin-top: 20px;
 }
 
+/* === Karty produktów === */
 .product {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  min-height: 420px; /* ✅ zwiększona wysokość */
+  min-height: 420px;
   padding: 15px;
   border: 1px solid #ccc;
   background-color: white;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
-  overflow: hidden; /* ✅ zapobiega rozlewaniu */
+  overflow: hidden;
 }
 
 .product-content {
@@ -65,126 +111,6 @@
 }
 
 .product button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.product.biżuteria { border-color: #c0a0ff; }
-.product.ubrania   { border-color: #a0d0ff; }
-.product.akcesoria { border-color: #ffd080; }
-
-#cart-count {
-  background-color: #f0c040;
-  color: black;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 12px;
-  margin-left: 6px;
-}
-
-@keyframes bounce {
-  0%   { transform: scale(1); }
-  30%  { transform: scale(1.4); }
-  60%  { transform: scale(0.9); }
-  100% { transform: scale(1); }
-}
-
-#cart-count.animate {
-  animation: bounce 0.4s ease;
-}
-
-.fly-to-cart {
-  position: absolute;
-  z-index: 1000;
-  transition: all 0.8s ease-in-out;
-  pointer-events: none;
-  width: 50px;
-  height: auto;
-  border-radius: 4px;
-}
-.cart-product {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border-bottom: 1px solid #ccc;
-  padding: 15px 0;
-}
-
-.cart-product img {
-  width: 100px;
-  height: auto;
-  border-radius: 4px;
-}
-
-.cart-details {
-  flex-grow: 1;
-}
-
-.cart-details h2 {
-  margin: 0;
-  font-size: 18px;
-}
-
-.cart-details .description {
-  font-size: 14px;
-  color: #555;
-  margin: 5px 0;
-}
-
-.cart-details .price {
-  font-weight: bold;
-  margin: 5px 0;
-}
-
-.cart-details button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 15px 30px;
-  background-color: #111;
-  color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-left,
-.header-center,
-.header-right {
-  flex: 1 1 300px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.header-center {
-  justify-content: center;
-}
-
-.header-right {
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.product button {
   background-color: #333 !important;
   color: white !important;
   border: none;
@@ -195,8 +121,15 @@ nav {
 }
 
 .product button:hover {
-  background-color: #555;
+  background-color: #555 !important;
 }
+
+/* === Kategorie kolorystyczne === */
+.product.biżuteria { border-color: #c0a0ff; }
+.product.ubrania   { border-color: #a0d0ff; }
+.product.akcesoria { border-color: #ffd080; }
+
+/* === Dropdown Kategorie === */
 .dropdown {
   position: relative;
 }
@@ -239,4 +172,79 @@ nav {
 
 .dropdown:hover .dropdown-content {
   display: flex;
+}
+
+/* === Koszyk === */
+.cart-product {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+.cart-product img {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.cart-details {
+  flex-grow: 1;
+}
+
+.cart-details h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cart-details .description {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.cart-details .price {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.cart-details button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* === Koszyk licznik i animacje === */
+#cart-count {
+  background-color: #f0c040;
+  color: black;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 6px;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.4); }
+  60%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+#cart-count.animate {
+  animation: bounce 0.4s ease;
+}
+
+.fly-to-cart {
+  position: absolute;
+  z-index: 1000;
+  transition: all 0.8s ease-in-out;
+  pointer-events: none;
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
 }
