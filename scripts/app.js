@@ -31,7 +31,33 @@ function addToCart(id) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.push(id);
   localStorage.setItem('cart', JSON.stringify(cart));
-  alert('Dodano do koszyka!');
+  updateCartCount();
+
+  // Animacja lecenia do koszyka
+  const product = document.querySelector(`button[onclick="addToCart(${id})"]`).closest('.product');
+  const img = product.querySelector('img');
+  const cartIcon = document.getElementById('cart-icon');
+
+  const clone = img.cloneNode(true);
+  clone.classList.add('fly-to-cart');
+  document.body.appendChild(clone);
+
+  const imgRect = img.getBoundingClientRect();
+  const cartRect = cartIcon.getBoundingClientRect();
+
+  clone.style.left = `${imgRect.left}px`;
+  clone.style.top = `${imgRect.top}px`;
+
+  setTimeout(() => {
+    clone.style.left = `${cartRect.left}px`;
+    clone.style.top = `${cartRect.top}px`;
+    clone.style.opacity = '0';
+    clone.style.transform = 'scale(0.5)';
+  }, 10);
+
+  setTimeout(() => {
+    clone.remove();
+  }, 800);
 }
 
 function filterProducts() {
@@ -75,3 +101,4 @@ item.innerHTML = `
 document.addEventListener('DOMContentLoaded', () => {
   updateCartCount(); // ← uruchamia licznik po załadowaniu strony
 });
+
