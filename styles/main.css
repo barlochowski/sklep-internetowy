@@ -272,3 +272,26 @@ nav {
   border-radius: 4px;
   font-size: 16px;
 }
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.cart-actions .button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cart-actions .button:hover {
+  background-color: #555;
+}
