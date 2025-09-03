@@ -102,10 +102,12 @@ nav {
 }
 
 .product img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  max-height: 200px;
+  object-fit: contain;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .product h2 {
