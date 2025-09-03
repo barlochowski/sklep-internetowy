@@ -5,46 +5,38 @@
   <title>Sklep z Biżuterią i Ubraniami</title>
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-<header>
-<div class="dropdown">
-  <button class="dropbtn">Kategorie</button>
-  <div class="dropdown-content">
-    <a href="#" data-value="">Wszystkie</a>
-    <a href="#" data-value="biżuteria">Biżuteria</a>
-    <a href="#" data-value="ubrania">Ubrania</a>
-    <a href="#" data-value="akcesoria">Akcesoria</a>
-  </div>
-</div>
-  <div class="search-bar">
- <input type="text" id="searchInput" placeholder="Szukaj produktu..." oninput="filterProducts()" />
-  <button onclick="searchProducts()"><i class="fa-solid fa-search"></i></button>
-</div>
-  <div class="logo">
-    <i class="fa-solid fa-gem"></i> Biżuteria & Moda
-  </div>
-  <nav>
-    <a href="index.html"><i class="fa-solid fa-house"></i> Strona główna</a>
-    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Koszyk</a>
-    <a href="#"><i class="fa-solid fa-user"></i> Konto</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-gem"></i> Biżuteria & Moda
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Szukaj produktu..." oninput="filterProducts()" />
+      <button><i class="fa-solid fa-search"></i></button>
+    </div>
+
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Strona główna</a>
+      <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Koszyk</a>
+      <a href="#"><i class="fa-solid fa-user"></i> Konto</a>
+
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-bars"></i> Kategorie</button>
+        <div class="dropdown-content">
+          <a href="#" data-value="">Wszystkie</a>
+          <a href="#" data-value="biżuteria">Biżuteria</a>
+          <a href="#" data-value="ubrania">Ubrania</a>
+          <a href="#" data-value="akcesoria">Akcesoria</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
   <main id="product-list"></main>
+
   <script src="scripts/app.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
