@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
       let total = 0;
 
       cart.forEach(entry => {
-        // Obsługa formatu: [1, 2, 3]
         if (typeof entry === 'number') {
           entry = { id: entry, quantity: 1 };
         }
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = document.createElement('div');
         item.className = 'checkout-product';
         item.innerHTML = `
-          <img src="${product.image}" alt="${product.name}" />
+          <img src="${product.image}" alt="${product.name}" class="product-image" />
           <div class="checkout-details">
             <h3>${product.name}</h3>
             <p class="description">${product.description}</p>
