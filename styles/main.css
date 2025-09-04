@@ -296,6 +296,47 @@ nav {
     justify-content: center;
   }
 }
+.cart-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.cart-items {
+  flex: 0 0 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-summary {
+  flex: 0 0 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.cart-summary h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.cart-summary p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cart-summary .button {
+  width: 100%;
+  margin-bottom: 10px;
+}
 /* === Koszyk licznik i animacje === */
 #cart-count {
   background-color: #f0c040;
