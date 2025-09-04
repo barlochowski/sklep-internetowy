@@ -452,55 +452,7 @@ nav {
     width: 100%;
     text-align: center;
   }
-/* === zamówienia === */
-.order-layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.order-form {
-  flex: 0 0 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.order-form input,
-.order-form select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.order-summary {
-  flex: 0 0 300px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.order-summary h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-#order-items {
-  margin-bottom: 20px;
-}
-
-#order-total {
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
+/* === Zamówienie: układ strony === */
 .order-page {
   display: flex;
   flex-direction: column;
@@ -511,6 +463,7 @@ nav {
   padding: 0 20px;
 }
 
+/* === Formularz zamówienia === */
 .order-form {
   width: 100%;
   display: flex;
@@ -524,8 +477,11 @@ nav {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* === Sekcja produktów w zamówieniu === */
 .order-items {
   width: 100%;
 }
@@ -537,8 +493,10 @@ nav {
   margin-top: 20px;
 }
 
+/* === Karta produktu w zamówieniu === */
 .order-product {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
   padding: 15px;
   border: 1px solid #ddd;
@@ -552,17 +510,21 @@ nav {
   height: auto;
   border-radius: 4px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
+/* === Szczegóły produktu === */
 .order-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
 }
 
 .order-details h3 {
   margin: 0;
   font-size: 16px;
+  font-weight: 600;
 }
 
 .order-details .description {
@@ -574,4 +536,66 @@ nav {
 .order-details .price {
   font-weight: bold;
   font-size: 15px;
+  margin-top: 10px;
+}
+
+/* === Podsumowanie zamówienia === */
+.order-summary {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+.order-summary h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+#order-total {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+/* === Przycisk zamówienia === */
+.order-summary .button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.order-summary .button:hover {
+  background-color: #555;
+}
+
+/* === Responsywność === */
+@media (max-width: 768px) {
+  .order-product {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .order-product img {
+    width: 80px;
+  }
+
+  .order-details {
+    align-items: center;
+  }
+
+  .order-summary {
+    width: 100%;
+  }
 }
