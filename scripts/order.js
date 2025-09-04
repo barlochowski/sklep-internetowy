@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = document.createElement('div');
         item.className = 'checkout-product';
         item.innerHTML = `
-          <img src="${product.image}" alt="${product.name}" class="product-image" />
+          <div class="image-wrapper">
+            <img src="${product.image}" alt="${product.name}" />
+          </div>
           <div class="checkout-details">
             <h3>${product.name}</h3>
             <p class="description">${product.description}</p>
