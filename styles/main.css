@@ -503,29 +503,25 @@ nav {
 /* === Karta produktu === */
 .checkout-product {
   display: flex;
+  align-items: center;
   gap: 20px;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 6px;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  max-width: 100%;
+  overflow: hidden;
 }
 
+/* === Obrazek produktu — poprawka rozmiaru === */
 .checkout-product img {
   width: 100px;
   height: 100px;
-  max-width: 100px;
-  max-height: 100px;
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;
   display: block;
-}
-.checkout-product img {
-  width: 80px;
-  height: 80px;
-  max-width: 80px;
-  max-height: 80px;
 }
 
 /* === Szczegóły produktu === */
