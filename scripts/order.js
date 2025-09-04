@@ -1,36 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-const container = document.getElementById('checkout-products');
-const valueEl = document.getElementById('summary-value');
-const discountEl = document.getElementById('summary-discount');
-const totalEl = document.getElementById('summary-total');
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const container = document.getElementById('checkout-products');
+  const valueEl = document.getElementById('summary-value');
+  const discountEl = document.getElementById('summary-discount');
+  const totalEl = document.getElementById('summary-total');
 
-fetch('data/products.json')
-  .then(res => res.json())
-  .then(products => {
-    let total = 0;
+  fetch('data/products.json')
+    .then(res => res.json())
+    .then(products => {
+      let total = 0;
 
-    cart.forEach(entry => {
-      const product = products.find(p => p.id === entry.id);
-      if (!product) return;
+      cart.forEach(entry => {
+        // Obsługa formatu: [1, 2, 3]
+        if (typeof entry === 'number') {
+          entry = { id: entry, quantity: 1 };
+        }
 
-      const subtotal = product.price * entry.quantity;
-      total += subtotal;
+        const product = products.find(p => p.id === entry.id);
+        if (!product) return;
 
-      const item = document.createElement('div');
-      item.className = 'checkout-product';
-      item.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" />
-        <div class="checkout-details">
-          <h3>${product.name}</h3>
-          <p class="description">${product.description}</p>
-          <p class="price">${product.price.toFixed(2)} zł × ${entry.quantity} = ${subtotal.toFixed(2)} zł</p>
-        </div>
-      `;
-      container.appendChild(item);
+        const subtotal = product.price * entry.quantity;
+        total += subtotal;
+
+        const item = document.createElement('div');
+        item.className = 'checkout-product';
+        item.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" />
+          <div class="checkout-details">
+            <h3>${product.name}</h3>
+            <p class="description">${product.description}</p>
+            <p class="price">${product.price.toFixed(2)} zł × ${entry.quantity} = ${subtotal.toFixed(2)} zł</p>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+
+      valueEl.textContent = `${total.toFixed(2)} zł`;
+      discountEl.textContent = `0,00 zł`;
+      totalEl.textContent = `${total.toFixed(2)} zł`;
+    })
+    .catch(error => {
+      console.error('Błąd podczas ładowania produktów:', error);
+      container.innerHTML = '<p>Nie udało się załadować produktów.</p>';
     });
-
-    valueEl.textContent = `${total.toFixed(2)} zł`;
-    discountEl.textContent = `0,00 zł`; // Możesz dodać logikę rabatową
-    totalEl.textContent = `${total.toFixed(2)} zł`;
-  });
+});
