@@ -18,17 +18,25 @@
   </a>
 </nav>
   </header>
-  <main>
+<main class="cart-layout">
+  <section class="cart-items">
+    <!-- Tutaj generowane produkty -->
     <div id="cart-items"></div>
-    <p id="total-price"></p>
+  </section>
+
+  <aside class="cart-summary">
+    <h2>Podsumowanie</h2>
+    <p id="total-price">Wartość koszyka: 0,00 zł</p>
     <div class="cart-actions">
       <button onclick="clearCart()" class="button">Wyczyść koszyk</button>
       <a href="order.html" class="button">Przejdź do zamówienia</a>
     </div>
-  </main>
+  </aside>
+</main>
   <script src="scripts/cart.js"></script>
 </body>
 </html>
+
 
 
 
