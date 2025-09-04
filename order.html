@@ -14,35 +14,37 @@
     </nav>
   </header>
 
-  <main class="order-layout">
-    <section class="order-form">
-      <h2>Dane kontaktowe</h2>
-      <input type="text" placeholder="Imię i nazwisko" required />
-      <input type="email" placeholder="E-mail" required />
-      <input type="tel" placeholder="Telefon" required />
+ <main class="order-page">
+  <section class="order-form">
+    <h2>Dane kontaktowe</h2>
+    <input type="text" placeholder="Imię i nazwisko" required />
+    <input type="email" placeholder="E-mail" required />
+    <input type="tel" placeholder="Telefon" required />
 
-      <h2>Adres dostawy</h2>
-      <input type="text" placeholder="Ulica i numer" required />
-      <input type="text" placeholder="Kod pocztowy" required />
-      <input type="text" placeholder="Miasto" required />
-      <input type="text" placeholder="Kraj" required />
+    <h2>Adres dostawy</h2>
+    <input type="text" placeholder="Ulica i numer" required />
+    <input type="text" placeholder="Kod pocztowy" required />
+    <input type="text" placeholder="Miasto" required />
+    <input type="text" placeholder="Kraj" required />
 
-      <h2>Metoda płatności</h2>
-      <select>
-        <option>Przelew bankowy</option>
-        <option>Karta płatnicza</option>
-        <option>Płatność przy odbiorze</option>
-      </select>
-    </section>
+    <h2>Metoda płatności</h2>
+    <select>
+      <option disabled selected>Wybierz metodę</option>
+      <option>Przelew bankowy</option>
+      <option>Karta płatnicza</option>
+      <option>Płatność przy odbiorze</option>
+    </select>
+  </section>
 
-    <aside class="order-summary">
-      <h2>Podsumowanie</h2>
-      <div id="order-items"></div>
-      <p id="order-total">Razem: 0,00 zł</p>
-      <button class="button">Zamawiam</button>
-    </aside>
-  </main>
+  <section class="order-items">
+    <h2>Podsumowanie</h2>
+    <div id="order-products"></div>
+    <p id="order-total">Razem: 0,00 zł</p>
+    <button class="button">Zamawiam</button>
+  </section>
+</main>
 
   <script src="scripts/order.js"></script>
 </body>
 </html>
+
