@@ -282,6 +282,20 @@ nav {
   border-radius: 4px;
   font-size: 14px;
 }
+@media (max-width: 600px) {
+  .cart-product {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cart-details {
+    align-items: center;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+  }
+}
 /* === Koszyk licznik i animacje === */
 #cart-count {
   background-color: #f0c040;
