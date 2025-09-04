@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const container = document.getElementById('order-items');
+  const container = document.getElementById('order-products');
   const totalEl = document.getElementById('order-total');
 
   fetch('data/products.json')
@@ -15,8 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const subtotal = product.price * entry.quantity;
         total += subtotal;
 
-        const item = document.createElement('p');
-        item.textContent = `${product.name} × ${entry.quantity} = ${subtotal.toFixed(2)} zł`;
+        const item = document.createElement('div');
+        item.className = 'order-product';
+        item.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" />
+          <div class="order-details">
+            <h3>${product.name}</h3>
+            <p class="description">${product.description}</p>
+            <p class="price">${product.price.toFixed(2)} zł × ${entry.quantity} = ${subtotal.toFixed(2)} zł</p>
+          </div>
+        `;
         container.appendChild(item);
       });
 
