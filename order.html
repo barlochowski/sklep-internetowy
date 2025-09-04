@@ -7,20 +7,42 @@
 </head>
 <body>
   <header>
-    <h1>Formularz zamówienia</h1>
+    <h1><i class="fa-solid fa-file-lines"></i> Zamówienie</h1>
     <nav>
-      <a href="index.html">Strona główna</a>
-      <a href="cart.html">Koszyk</a>
+      <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Strona główna</a>
+      <a href="cart.html" class="nav-link"><i class="fa-solid fa-cart-shopping"></i> Koszyk</a>
     </nav>
   </header>
-  <main>
-    <form id="order-form">
-      <label>Imię: <input type="text" name="name" required /></label>
-      <label>Email: <input type="email" name="email" required /></label>
-      <label>Adres: <input type="text" name="address" required /></label>
-      <button type="submit" data-testid="submit-order">Zamów</button>
-    </form>
+
+  <main class="order-layout">
+    <section class="order-form">
+      <h2>Dane kontaktowe</h2>
+      <input type="text" placeholder="Imię i nazwisko" required />
+      <input type="email" placeholder="E-mail" required />
+      <input type="tel" placeholder="Telefon" required />
+
+      <h2>Adres dostawy</h2>
+      <input type="text" placeholder="Ulica i numer" required />
+      <input type="text" placeholder="Kod pocztowy" required />
+      <input type="text" placeholder="Miasto" required />
+      <input type="text" placeholder="Kraj" required />
+
+      <h2>Metoda płatności</h2>
+      <select>
+        <option>Przelew bankowy</option>
+        <option>Karta płatnicza</option>
+        <option>Płatność przy odbiorze</option>
+      </select>
+    </section>
+
+    <aside class="order-summary">
+      <h2>Podsumowanie</h2>
+      <div id="order-items"></div>
+      <p id="order-total">Razem: 0,00 zł</p>
+      <button class="button">Zamawiam</button>
+    </aside>
   </main>
+
   <script src="scripts/order.js"></script>
 </body>
 </html>
