@@ -5,26 +5,24 @@
   <title>Koszyk</title>
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="scripts/cart.js"></script>
 </head>
 <body>
   <header>
-    <h1><i class="fa-solid fa-cart-shopping"></i> Koszyk</h1>
-    <nav>
+    <div class="header-left">
       <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Strona główna</a>
-      <a href="order.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Zamówienie</a>
-    </nav>
+    </div>
+    <div class="header-center"><h1>Koszyk</h1></div>
+    <div class="header-right"></div>
   </header>
 
   <main class="cart-layout">
-    <section class="cart-products" id="cart-products"></section>
-
+    <section class="cart-items" id="cart-products"></section>
     <aside class="cart-summary">
       <h2>Podsumowanie</h2>
-      <p>Wartość koszyka: <span id="cart-total">0,00 zł</span></p>
-      <button class="button" onclick="location.href='order.html'">Przejdź do zamówienia</button>
+      <p>Wartość: <span id="cart-total">0,00 zł</span></p>
+      <a href="order.html" class="button">Przejdź do zamówienia</a>
     </aside>
   </main>
-
-  <script src="scripts/cart.js"></script>
 </body>
 </html>
