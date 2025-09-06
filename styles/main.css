@@ -500,6 +500,8 @@ nav {
   border-radius: 6px;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .image-wrapper {
@@ -510,7 +512,7 @@ nav {
   border-radius: 6px;
 }
 
-.image-wrapper img {
+.product-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
