@@ -4,23 +4,53 @@
   <meta charset="UTF-8" />
   <title>Zamówienie</title>
   <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
-    <h1>Formularz zamówienia</h1>
+    <h1><i class="fa-solid fa-file-lines"></i> Zamówienie</h1>
     <nav>
-      <a href="index.html">Strona główna</a>
-      <a href="cart.html">Koszyk</a>
+      <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Strona główna</a>
+      <a href="cart.html" class="nav-link"><i class="fa-solid fa-cart-shopping"></i> Koszyk</a>
     </nav>
   </header>
-  <main>
-    <form id="order-form">
-      <label>Imię: <input type="text" name="name" required /></label>
-      <label>Email: <input type="email" name="email" required /></label>
-      <label>Adres: <input type="text" name="address" required /></label>
-      <button type="submit" data-testid="submit-order">Zamów</button>
-    </form>
+
+  <main class="checkout-layout">
+    <section class="checkout-left">
+      <h2>Dane kontaktowe</h2>
+      <input type="text" placeholder="Imię i nazwisko" required />
+      <input type="email" placeholder="E-mail" required />
+      <input type="tel" placeholder="Telefon" required />
+
+      <h2>Adres dostawy</h2>
+      <input type="text" placeholder="Ulica i numer" required />
+      <input type="text" placeholder="Kod pocztowy" required />
+      <input type="text" placeholder="Miasto" required />
+      <input type="text" placeholder="Kraj" required />
+
+      <h2>Metoda płatności</h2>
+      <select>
+        <option disabled selected>Wybierz metodę</option>
+        <option>BLIK</option>
+        <option>Karta płatnicza</option>
+        <option>Przelew bankowy</option>
+        <option>Płatność przy odbiorze</option>
+      </select>
+    </section>
+
+    <section class="checkout-right">
+      <h2>Twoje produkty</h2>
+      <div id="checkout-products"></div>
+
+      <div class="checkout-summary">
+        <p>Wartość produktów: <span id="summary-value">0,00 zł</span></p>
+        <p>Zniżka: <span id="summary-discount">0,00 zł</span></p>
+        <p class="total">Do zapłaty: <span id="summary-total">0,00 zł</span></p>
+        <button class="button">Zapłać teraz</button>
+      </div>
+    </section>
   </main>
+
   <script src="scripts/order.js"></script>
 </body>
 </html>
