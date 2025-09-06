@@ -8,35 +8,23 @@
 </head>
 <body>
   <header>
-   <h1><i class="fa-solid fa-cart-shopping"></i> Twój koszyk</h1>
- <nav>
-  <a href="index.html" class="nav-link">
-    <i class="fa-solid fa-house"></i> Strona główna
-  </a>
-  <a href="order.html" class="nav-link">
-    <i class="fa-solid fa-file-lines"></i> Zamówienie
-  </a>
-</nav>
+    <h1><i class="fa-solid fa-cart-shopping"></i> Koszyk</h1>
+    <nav>
+      <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Strona główna</a>
+      <a href="order.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Zamówienie</a>
+    </nav>
   </header>
-<main class="cart-layout">
-  <section class="cart-items">
-    <!-- Tutaj generowane produkty -->
-    <div id="cart-items"></div>
-  </section>
 
-  <aside class="cart-summary">
-    <h2>Podsumowanie</h2>
-    <p id="total-price">Wartość koszyka: 0,00 zł</p>
-    <div class="cart-actions">
-      <button onclick="clearCart()" class="button">Wyczyść koszyk</button>
-      <a href="order.html" class="button">Przejdź do zamówienia</a>
-    </div>
-  </aside>
-</main>
+  <main class="cart-layout">
+    <section class="cart-products" id="cart-products"></section>
+
+    <aside class="cart-summary">
+      <h2>Podsumowanie</h2>
+      <p>Wartość koszyka: <span id="cart-total">0,00 zł</span></p>
+      <button class="button" onclick="location.href='order.html'">Przejdź do zamówienia</button>
+    </aside>
+  </main>
+
   <script src="scripts/cart.js"></script>
 </body>
 </html>
-
-
-
-
