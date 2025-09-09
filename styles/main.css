@@ -76,6 +76,47 @@ nav {
 .nav-link:hover {
   color: #f0c040;
 }
+footer {
+  background-color: #111;
+  color: #ddd;
+  margin-top: 40px;
+  padding: 30px 20px 10px;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #f0c040;
+}
+
+.footer-section p, .footer-section a {
+  margin: 5px 0;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #f0c040;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #aaa;
+}
 
 /* === Dropdown Kategorie === */
 .dropdown {
