@@ -463,3 +463,31 @@ button:hover,
   background-color: #d9a030;
   transform: translateY(-2px);
 }
+.cart-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cart-actions .button {
+  width: 100%;
+  text-align: center;
+}
+
+.quantity-controls button {
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f0c040;
+  color: #111;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-controls button:hover {
+  background-color: #d9a030;
+}
