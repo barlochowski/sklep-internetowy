@@ -17,19 +17,38 @@
   </header>
 
   <main class="checkout-layout">
+    <!-- Formularz klienta -->
     <section class="checkout-left">
-      <input type="text" placeholder="Imię i nazwisko" required />
-      <input type="email" placeholder="E-mail" required />
-      <input type="tel" placeholder="Telefon" required />
-      <input type="text" placeholder="Adres dostawy" required />
-      <select>
-        <option disabled selected>Wybierz metodę płatności</option>
-        <option>BLIK</option>
-        <option>Karta</option>
-        <option>Przelew</option>
-      </select>
+      <form id="order-form">
+        <label>
+          Imię i nazwisko
+          <input type="text" name="name" placeholder="Imię i nazwisko" required />
+        </label>
+        <label>
+          E-mail
+          <input type="email" name="email" placeholder="E-mail" required />
+        </label>
+        <label>
+          Telefon
+          <input type="tel" name="phone" placeholder="Telefon" required />
+        </label>
+        <label>
+          Adres dostawy
+          <input type="text" name="address" placeholder="Adres dostawy" required />
+        </label>
+        <label>
+          Metoda płatności
+          <select name="payment" required>
+            <option disabled selected>Wybierz metodę płatności</option>
+            <option>BLIK</option>
+            <option>Karta</option>
+            <option>Przelew</option>
+          </select>
+        </label>
+      </form>
     </section>
 
+    <!-- Podsumowanie zamówienia -->
     <section class="checkout-right">
       <h2>Twoje produkty</h2>
       <div id="checkout-products"></div>
@@ -37,7 +56,10 @@
         <p>Wartość: <span id="summary-value">0,00 zł</span></p>
         <p>Zniżka: <span id="summary-discount">0,00 zł</span></p>
         <p class="total">Do zapłaty: <span id="summary-total">0,00 zł</span></p>
-        <button class="button">Zapłać teraz</button>
+        <div class="checkout-actions">
+          <a href="cart.html" class="button">← Wróć do koszyka</a>
+          <button type="submit" form="order-form" class="button">Zapłać teraz</button>
+        </div>
       </div>
     </section>
   </main>
